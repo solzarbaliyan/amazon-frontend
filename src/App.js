@@ -2,12 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './Component/Navbar/navbar';
 import HomeScreen from './Screen/HomeScreen/homeScreen';
+import { Routes,Route } from 'react-router-dom';
+import Products from './Screen/Products/products';
+import Footer from './Component/Footer/footer';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <HomeScreen />
+      <Routes>
+        <Route path='/' element= {<HomeScreen />} />
+        <Route path='/products' element= {<Products />} />
+      </Routes>
+      <Footer />
+      
     </div>
   );
 }
